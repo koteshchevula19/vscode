@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Normal Function   */
+        function sum(a,b) {
+            return a+b;
+        }
+        
+        /* Arrow function */
+        const sum1 = (a,b) => a+b; 
+        
+      
+        /* anonymous function*/
+        const sum2 = function (a, b) {
+            return a+b;
+        }
+
+        /*-- Helper function */
+        function even(num){
+            return num%2==0;
+        }
+        function printmsg(even,num){
+            let printMsg=even(num)
+            console.log(`The ${num} is even: ${printMsg} `)
+        }
+        printmsg(even,7)
+        console.log(sum(10,20));
+        console.log(sum1(11,22))
+        console.log(sum2(22,22))
+    </script>
+</body>
+
+</html>

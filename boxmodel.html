@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>BOX MODEL</title>
+    <style>
+        .div1 {
+            background-color: cadetblue;
+            width: fit-content;
+            height: 60px;
+            padding: 10px 15px 25px 30px;
+            margin: auto;
+            border: 5px solid crimson
+                /* for the MARGIN and PADDING top right bottom left */
+                /*   top right&left bottom */
+                /*   top&bottom left&right */
+                /*   all 4  */
+
+
+        }
+
+        .div2fixed {
+
+            background-color: chartreuse;
+            top: 100px;
+            left: 250px;
+            /* POSITION types-->fixed,absolute,static,relative,sticky  */
+            position: fixed;
+
+        }
+
+        .div3absolute {
+            background-color: blueviolet;
+            top: 100px;
+            left: 350px;
+            position: absolute;
+
+
+
+        }
+
+        .div5relative {
+            background-color: darkmagenta;
+            top: 90px;
+            position: relative;
+
+        }
+
+        .div6sticky {
+            background-color: deeppink;
+            top: 80px;
+            position: sticky;
+
+        }
+
+        .div8relative {
+            background-color: yellow;
+            top: 100px;
+            position: relative;
+
+        }
+
+        .div4absolute {
+            background-color: blueviolet;
+            top: 50px;
+            left: 500px;
+            position: absolute;
+            opacity: 1;
+        }
+        #img
+        {
+            
+            background-color: chartreuse;
+            width: 200px;
+            
+            position: relative;
+        }
+    </style>
+</head>
+
+<body style="min-height:2000px" ;>
+    <div class="div1">THIS IS DIV-1 static </div>
+    <div class="div2fixed">THIS IS DIV-2 FIXED</div>
+    <div class="div3absolute">THIS IS DIV-3 ABS</div>
+    <div style="background-color: darkgoldenrod;">THIS IS DIV-4 STATIC</div>
+    <div class="div5relative">THIS IS DIV-5 relative </div>
+    <div class="div6sticky">THIS IS DIV-6 STICKY </div>
+    <div style="background-color: forestgreen;">THIS IS DIV-7 STATIC</div>
+    <div class="div8relative">THIS IS DIV-8 relative </div>
+    <div id="img"> Hello World </div>
+   
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>

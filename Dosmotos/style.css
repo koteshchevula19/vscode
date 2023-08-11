@@ -1,0 +1,40 @@
+#header1 {
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    background-image: url(Images/pattern.webp);
+}
+
+#header2 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: mediumspringgreen;
+}
+
+#header3 {
+    font-family: Helvetica;
+
+}
+
+#spna-1 {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: blue;
+}
+#header4 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: lightcoral;
+}
+#header5 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color:skyblue ;
+}

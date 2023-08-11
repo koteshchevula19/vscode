@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #array {
+            background-color: aliceblue;
+            color: coral;
+            text-align: center;
+            margin: 100px -100px 100px;
+            font-weight: 900;
+        }
+
+        #searchele {
+            margin: 100px;
+            border: 2px solid darksalmon;
+        }
+    </style>
+
+</head>
+
+<body style="min-height: 2000px;">
+
+
+
+    <input type="number" placeholder="Enter the no. you search" id="searchele">
+    <input type="button" value="Performing All Tasks " onclick="Arrays()" id="array">
+
+    <script>
+
+
+
+        function Arrays() {
+            var myArray = [9, 4, 1, 5, 6, 7, 9]
+            var wArray = [9, 4, 1, 5, 6, 7, 9]
+            let searchElement = Number(document.getElementById("searchele").value)
+            document.writeln("<h3>" + "Array Elements: [ " + myArray + " ]" + "</h3>")
+            document.writeln("<h3>" + "Size of the Array is: " + myArray.length + "</h3>")
+            document.writeln("<h3>" + "Middle element of the Array is: " + mideleArray(myArray) + "</h3>")
+            document.writeln("<h3>" + "Maximum of the Array is: " + maxArray(myArray) + "</h3>")
+            document.writeln("<h3>" + "Mimimum of the Array is: " + minArray(myArray) + "</h3>")
+            document.writeln("<h3>" + "Second max of the Array is: " + secmaxArray(myArray, maxArray(myArray), minArray(myArray)) + "</h3>")
+            document.writeln("<h3>" + "Second min of the Array is: " + secminArray(myArray, maxArray(myArray), minArray(myArray)) + "</h3>")
+            document.writeln("<h3>" + "Sum of the Array: " + sumArray(myArray) + "</h3>")
+            document.writeln("<h3>" + "Odd index Values of array: [ " + oddindexArray(myArray) + " ]" + "</h3>")
+            document.writeln("<h3>" + "Even index Values of array: [ " + evenindexArray(myArray) + " ]" + "</h3>")
+            document.writeln("<h3>" + "Ascending order of array: [ " + ascArray(myArray) + " ]" + "</h3>")
+            document.writeln("<h3>" + "Descending order of array: [ " + descArray(myArray) + " ]" + "</h3>")
+            document.writeln("<h3>" + "Array Elements: [ " + myArray + " ]" + "</h3>")
+            document.writeln("<h3>" + "First half weightage of array: " + fhweight(wArray) + "</h3>")
+            document.writeln("<h3>" + "Second half weightage of array: " + shweight(wArray) + "</h3>")
+            document.writeln("<h3>" + "Prime numbers in the Array: [ " + prime(wArray) + " ]" + "</h3>")
+            document.writeln("<h3>" + " Searching element in the array: " + search(wArray, searchElement) + "</h3>")
+
+
+        }
+
+        function mideleArray(myArray) {
+            return myArray[Math.floor(myArray.length / 2)]
+        }
+
+        function maxArray(myArray) {
+            let max = myArray[0];
+            for (let i = 1; i < myArray.length; i++) {
+                if (max < myArray[i]) {
+                    max = myArray[i];
+                }
+
+            }
+            return max;
+        }
+
+        function minArray(myArray) {
+            let min = myArray[0];
+            for (let i = 1; i < myArray.length; i++) {
+                if (min >= myArray[i]) {
+                    min = myArray[i];
+                }
+
+            }
+            return min;
+        }
+
+        function secmaxArray(myArray, max, min) {
+            let smax = min - max;
+            for (let i = 0; i < myArray.length; i++) {
+                if (max > myArray[i] && smax <= myArray[i] && min < myArray[i]) {
+                    smax = myArray[i];
+                }
+            }
+            return smax;
+        }
+
+        function secminArray(myArray, max, min) {
+            let smin = max - min;
+            for (let i = 0; i < myArray.length; i++) {
+                if (min < myArray[i] && smin >= myArray[i] && max > myArray[i]) {
+                    smin = myArray[i];
+                }
+            }
+            return smin;
+        }
+
+        function sumArray(myArray) {
+            let sum = 0;
+            for (let i = 0; i < myArray.length; i++) {
+                sum += myArray[i];
+            }
+            return sum;
+        }
+
+        function oddindexArray(myArray) {
+            let oddSize = Math.floor(myArray.length / 2);
+            let oddIndex = new Array(oddSize);
+            let j = 0;
+
+            for (let i = 1; i < myArray.length; i += 2) {
+                oddIndex[j] = myArray[i];
+                j++;
+            }
+
+            return oddIndex;
+        }
+
+        function evenindexArray(myArray) {
+            let evenSize = Math.ceil(myArray.length / 2);
+            let evenIndex = new Array(evenSize);
+            let j = 0;
+
+            for (let i = 0; i < myArray.length; i += 2) {
+                evenIndex[j] = myArray[i];
+                j++;
+            }
+
+            return evenIndex;
+        }
+        function ascArray(myArray) {
+            let ascendArray = myArray;
+            for (let i = 0; i < myArray.length - 1; i++) {
+                for (let j = 0; j < myArray.length - 1; j++) {
+                    if (ascendArray[j] > ascendArray[j + 1]) {
+                        let temp = ascendArray[j];
+                        ascendArray[j] = ascendArray[j + 1];
+                        ascendArray[j + 1] = temp;
+                    }
+                }
+            }
+            return ascendArray;
+        }
+
+        function descArray(myArray) {
+            let descendArray = myArray;
+            for (let i = 0; i < myArray.length - 1; i++) {
+                for (let j = 0; j < myArray.length - 1; j++) {
+                    if (descendArray[j] < descendArray[j + 1]) {
+                        let temp = descendArray[j];
+                        descendArray[j] = descendArray[j + 1];
+                        descendArray[j + 1] = temp;
+                    }
+                }
+            }
+            return descendArray;
+        }
+
+       function fhweight(myArray) {
+            let fihalfwgh = 0;
+
+            for (let i = 0; i < Math.floor(myArray.length / 2); i++) {
+                fihalfwgh += myArray[i];
+            }
+            return fihalfwgh;
+        }
+
+        function shweight(myArray) {
+            let sehalfwgh = 0;
+
+            for (let i = Math.floor(myArray.length / 2); i < myArray.length; i++) {
+                sehalfwgh += myArray[i];
+            }
+            return sehalfwgh;
+        }
+
+        function prime(myArray) {
+            let primeArray = [];
+            let j = 0;
+            for (let i = 0; i < myArray.length; i++) {
+
+                if (isPrime(myArray[i])) {
+                    primeArray[j] = myArray[i];
+                    j++;
+                }
+            }
+            return primeArray;
+        }
+        function isPrime(num) {
+            if (num <= 1)
+                return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    return false;
+
+                }
+            }
+            return true;
+        }
+
+        function search(myArray, searchElement) {
+
+            for (let i = 0; i < myArray.length; i++) {
+                if (myArray[i] == searchElement) {
+                    return myArray[i] + " is present at the index: " + i;
+                }
+
+            }
+            return "There is no such value present in the Array"
+        }
+      
+
+
+
+    </script>
+
+</body>
+
+</html>

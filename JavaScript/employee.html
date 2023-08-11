@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="s_name" placeholder="Enter the name"/>
+    <input type="number" id="m1" placeholder="Enter the marks1" />
+    <input type="number" id="m2" placeholder="Enter the marks2"/>
+    <input type="number" id="m3" placeholder="Enter the marks3"/>
+    <input type="number" id="no_sub" placeholder="Enter the no.subject"/>
+    <input type="button" value="CalculateMarks" onclick="fun1()"/>
+    <h1 id="Dispaly"></h1>
+
+    <script>
+
+            function totalMarks(m1, m2, m3) {
+                let sum = m1 + m2 + m3;
+            return sum;
+    }
+            function avgMarks(sum, no_sub){
+                let avg= sum/no_sub;
+                return avg;
+            }
+            function findResult(m1,m2,m3){
+                if(m1>50 && m2>50 && m3>50){
+                    return "pass"
+                }
+                    return "fail"
+            }
+
+    function employee(){
+         
+         let getValue= document.getElementById("s_name").value;
+         let m1= Number(document.getElementById("m1").value);
+         let m2= Number(document.getElementById("m2").value);
+         let m3= Number(document.getElementById("m3").value);
+         let no_sub= Number(document.getElementById("no_sub").value);
+         let Total=totalMarks(m1,m2,m3)
+         let Average=avgMarks(Total, no_sub)
+         let Result=findResult(m1,m2,m3)
+              document.getElementById("Dispaly").innerText=getValue+"total:"+Total+"Average: "+Average+"result:"+Result;
+      }
+
+       document.writeln(employee())
+
+
+    </script>
+
+
+</body>
+
+</html>

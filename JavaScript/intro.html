@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="textbox" id="depName" placeholder="Department Name" style="background-color: aquamarine;">
+    <input type="number" id="empSal1" placeholder="enter the salary" style="background-color: aquamarine;" >
+    <input type="number" id="empSal2" placeholder="enter the salary" style="background-color: aquamarine;" >
+    <input type="number" id="empSal3" placeholder="enter the salary" style="background-color: aquamarine;" >
+    <input type="button" value="Calculate" onclick="employee()" style="background-color: aquamarine;" />
+    <h1 id="Dispaly"></h1>
+
+    <script>
+
+           function employee() {
+            let getValue = document.getElementById("depName").value;
+            let empSal1 = Number(document.getElementById("empSal1").value);
+            let empSal2 = Number(document.getElementById("empSal2").value);
+            let empSal3 = Number(document.getElementById("empSal3").value);
+            let Total = totSal(empSal1, empSal2, empSal3);
+            let Average = avgSal(Total, 3);
+            let Result=highSal(empSal1,empSal2,empSal3);
+            document.getElementById("Dispaly").innerText = getValue + " Department salaries " + " Total : " + Total + " Average: " + Average + " Final Conclusion: "+Result;
+
+        }
+        function totSal(empSal1, empSal2, empSal3) {
+            let total = empSal1 + empSal2 + empSal3;
+            return total;
+        }
+        function avgSal(total, number) {
+            let avg = total / number;
+            return avg;
+        }
+        function highSal(empSal1, empSal2, empSal3) {
+            let result = empSal1 > empSal2 ? empSal1 > empSal3 ?
+                " empSal1 is getting highest salary:" + empSal1 + " INR ":
+                " empSal3 is getting highest salary:" + empSal1 + " INR ":
+                empSal2 > empSal3 ?
+                    " empSal2 is getting highest salary:" + empSal2 + " INR":
+                    "empSal3 is getting highest salary:" + empSal3 + " INR";
+                    return result;
+        }
+
+    </script>
+</body>
+
+</html>

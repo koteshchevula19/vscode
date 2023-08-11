@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>SELECTORS</title>
+    <style>
+        p {
+            background-color: hsl(120, 80, 50%);
+        }
+
+        #para {
+            background-color: aqua;
+            text-align: center;
+            color: bisque;
+            text-decoration: wavy;
+            padding: 0fr;
+            animation: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .myclass {
+            background-color: blanchedalmond;
+            color: #00ff24;
+            text-shadow: #ff2345;
+            text-align: center;
+
+        }
+
+        .border {
+            border-style: solid;
+            border-color: brown;
+            border-width: 5px;
+            border-radius:10px;
+             
+        }
+
+        h4,
+        h3
+
+        /* GROUP SELECTOR*/
+            {
+            background-attachment: fixed;
+            background-color: aqua;
+            background-image: -moz-linear-gradient();
+            text-align: center;
+        }
+
+        *
+
+        /*UNIVERSAL SELECTOR*/
+            {
+            background-color:burlywood;
+            /*background-image:url("https://th.bing.com/th/id/R.1f1cf1d6a2b0706bf8298e2b51712816?rik=B%2fMrB2iFdt%2bHGg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f6%2fb%2fe%2f1232382-gorgerous-avatar-hd-wallpaper-2048x1536-for-4k-monitor.jpg&ehk=VmqvG6heL1A2AD9LBvdr8veJT%2bqpsYz%2feL6okwBbljs%3d&risl=&pid=ImgRaw&r=0");*/
+            /*background-position: center;*/
+            background-attachment: fixed;
+            /*background-repeat: no-repeat;*/
+            margin-left: 10px;
+            margin-right:10px
+
+        }
+        [href]{
+            font-family:'Courier New', Courier, monospace ;
+        
+
+        }
+
+        /* selector chaining using pseudo class and attribute selector Both combination should occur*/
+        [href]:hover {
+
+            color: #00ff24
+        }
+        /* Descendent Selector we have to give space */
+        div ol li{
+             color: blue;
+             background-color: #00ff24;
+        }
+        ul #brinjal,ul .potato
+        {
+            color: orangered;
+            background-color:cornflowerblue;
+        }
+        [src]
+        {
+            image-orientation:from-image;
+        }
+        h1:hover
+        {
+            color: darkgoldenrod;
+        }
+        
+        
+
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;"><u>VARIOUS KIND OF SELECTORS</u></h1>
+    <p>This is elelment selector</p>
+    <p id="para"> This Id selector</p>
+    <p class="myclass">This is class selector</p>
+    <h4> this is heading four</h4>
+    <h3> this is heading three</h3>
+    <h5>This is heading five GIVING STYLE BY GROUP SELECTOR</h5>
+    <h7 class="border">This is border style color width radius</h7><br><br>
+
+    <a href="employee.html">EMPLOYEE FORM</a><br>  
+    <div>
+        <ol type="I">
+
+            <li>APPLE</li>
+            <li>BANANA</li>
+            <li>APRICOT</li>
+        </ol>
+    </div>
+    <ul type="disc">
+        <li id="brinjal">BRINJAL</li>
+        <li class="radish">RADISH</li>
+        <li class="potato" >POTATO</li>
+
+
+
+    </ul>
+    <img src="C:\Users\kotesh\newgit\image12.png"></img><br><br>
+    <b style=border-width:5px;border-style:dashed;border-radius:5px;border-color:darkgreen>Image</b><br>
+
+    <table border="2">
+        <caption>TABLE 1 GROUP SELECTORS</caption>
+        <tr>
+            <td>COL1</td>
+            <td>COL2</td>
+            <td>COL3</td>
+        </tr>
+        <tr>
+            <td>ROW 1 CELL1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>ROW 2 CELL 3</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ROW 3 CELL2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>ROW 4 CELL 2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>ROW 5 CELL 3</td>
+        </tr>
+    </table>
+    <h1 style="text-align: center;border-style:dotted;border-width:5px;border-radius:55px;border-color: darkolivegreen;">END OF THE PAGE</h1>
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <h3>Employee Application Form</h3>
+    <form method="GET">
+        <fieldset>
+            <legend> Employee Details</legend>
+            <table border="0" bgcolor="green">
+                <tr>
+                    <td><label for="eName">Enter emp Name:</label></td>
+                    <td><input type="text" id="eName" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Password:</label></td>
+                    <td><input type="password" name="passwd" id="pwd" placeholder="password" required minlength="6"
+                            maxlength="10" /></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><label for="gender">Gender</label></td>
+                    <td><input type="radio" id="male" name="gender" />male
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="female" name="gender" />female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="qualification"> Give your highest qualification</label></td>
+                    <td><input type="text" list="qualification" id="highest qualification"></td>
+                    <datalist id="qualification">
+                        <option>B.Tech</option>
+                        <option>MCA</option>
+                        <option>MBA</option>
+                        <option>BSc</option>
+                        <option>BCA</option>
+                    </datalist>
+                </tr><br />
+                <tr>
+                    <td> <label for="emailId">Email</label></td>
+                    <td><input type="email" id="emailId"></td>
+                </tr>
+                <tr>
+                    <td> <label for="phNbr">Phone No :+91-</label></td>
+                    <td><input type="text" id="phNbr" name="phNbr" pattern="[0-9]{10}" /></td>
+                </tr>
+                <tr>
+                    <td> <label for="DOB">Date of Birth</label></td>
+                    <td><input type="date" id="DOB" name="DOB"></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3"><label for="employment">Employment Type:</label></td>
+                    <td><input type="radio" id="fulltime" name="employment" />fulltime
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="parttime" name="employment" />parttime
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="hourly" name="employment" />hourly
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+        <fieldset>
+            <legend><b>Interest and Acheivements</b></legend>
+            <b> Interests</b><br>
+            Cricket <input type="checkbox" id="cricket" /><br />
+            FootBall <input type="checkbox" id="football" /><br />
+            VolleyBall <input type="checkbox" id="volleyball" /><br />
+            Surfing <input type="checkbox" id="Surfing" /><br />
+            Swimming <input type="checkbox" id="Swimming" /><br />
+            Planting <input type="checkbox" id="planting" /><br />
+            <b>Acheivements:</b></br><textarea rows="5" cols="50"></textarea><br />
+
+            </br><input type="submit" value="Apply" />
+            <input type="reset" value="clear" />
+
+        </fieldset>
+    </form>
+
+
+
+
+
+</body>
+
+</html>

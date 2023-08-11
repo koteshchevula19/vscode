@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="name" placeholder="Enter the name" />
+
+
+    <input type="button" value="Add Values" onclick="addStudent()"/> 
+    <input type="button" value="Remove Values" onclick="removeStudent()"/> 
+
+    <input type="text" placeholder="Enter the image url" id="url"/>
+    <input type="button"  value="add image" onclick="addImages()" />
+
+    <h1 id="display"></h1>
+<!---->
+    <img id="imageUrl" />
+
+
+    <script>
+        let Student_logs=[];
+        let prot_img=[];
+
+        document.writeln("<h1>"+Student_logs.length+"</h1>");
+
+        Student_logs.push("java");
+
+       
+   
+        function addStudent(){
+            let name = document.getElementById("name").value;
+
+            Student_logs.push(name)
+            alert("values added")
+            console.log(Student_logs)
+            document.getElementById("display").innerText=Student_logs
+        }
+      function removeStudent(){
+        
+        Student_logs.pop();
+
+        console.log(Student_logs)
+        document.getElementById("display").innerText=Student_logs
+      }
+
+      function addImages(){
+        let img_url = document.getElementById("url").value;
+        prot_img.push(img_url);
+        console.log(prot_img);
+        let images =document.getElementById("imageUrl");
+        for(let tem in prot_img){
+            images.setAttribute("src",img_url);
+        }
+       
+        console.log(images)
+
+      }
+
+    </script>
+    
+    
+</body>
+</html>

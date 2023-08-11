@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body style="min-height: 1500px;">
+    <h3>Student Application Form</h3>
+    <form method="GET">
+        <fieldset>
+            <legend> Sudent Details</legend>
+            <table border="0" bgcolor="yellow">
+                <tr>
+                    <td><label for="sName">Enter student Name:</label></td>
+                    <td><input type="text" name="sName" id="sName" required pattern="[A-Z]{a-z}" placeholder="student Name"/></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Password:</label></td>
+                    <td><input type="password" name="passwd" id="pwd" placeholder="password" required minlength="6"
+                            maxlength="10" required  /></td>
+                </tr>
+                <tr>
+                    <td> <label for="emailId">Email</label></td>
+                    <td><input type="email" id="emailId" placeholder="Please enter a valid email"></td>
+                </tr>
+                <tr>
+                    <td> <label for="phNbr">Phone No :+91-</label></td>
+                    <td><input type="text" id="phNbr" name="phNbr" pattern="[0-9]{10}" /></td>
+                </tr>
+                <tr>
+                    <td> <label for="DOB">Date of Birth</label></td>
+                    <td><input type="date" id="DOB" name="DOB"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><label for="gender">Gender</label></td>
+                    <td><input type="radio" id="male" name="gender" />male
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="female" name="gender" />female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="district"> Select District</label></td>
+                    <td><input type="text" list="district" id="district" required placeholder="District Name"></td>
+                    <datalist id="district">
+                        <option>Nalgonda</option>
+                        <option>Adilabad</option>
+                        <option>Mahabubnagar</option>
+                        <option>Warangal</option>
+                        <option>Karimnagar</option>
+                        <option>Siricilla</option>
+                        <option>Khammamam</option>
+                        <option>Suryapet</option>
+                        <option>Siddipet</option>
+                        <option>Vemulawada</option>
+                    </datalist>
+                </tr><br />
+            
+
+
+            </table>
+            <b>Address:</b></br><textarea rows="5" cols="50"></textarea><br />
+
+
+
+
+            <b> Courses</b><br>
+            <input type="checkbox" id="Java" />Java<br />
+            <input type="checkbox" id="Oracle" />Oracle<br />
+            <input type="checkbox" id="Python" />Python<br />
+            <input type="checkbox" id="React" />React<br />
+            <input type="checkbox" id="CSS" />CSS<br />
+            <input type="checkbox" id="Html" />Html<br />
+             
+
+            </br><input type="submit" value="Apply" />
+            <input type="reset" value="clear" />
+
+        </fieldset>
+
+
+
+
+
+
+</body>
+
+</html>

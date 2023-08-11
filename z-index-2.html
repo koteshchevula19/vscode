@@ -1,0 +1,43 @@
+<html>
+    <head><title>Z-INDEX</title>
+        <style>
+            .b,.c,.d{
+                height: 150px;
+                width: 150px;
+                position: absolute;
+                top: 3px;
+            }
+            .a{
+                height: 150px;
+                width: 150px;
+                background-color: chartreuse;
+                 
+            }
+            .b{
+                 background-color: blue;z-index: -1;left: 10px;
+            }
+            .c{
+                background-color:maroon;z-index: 2; left: 25px;
+            }
+            
+            .d{
+                background-color:dimgrey;z-index: 1; left: 40px;
+            }
+            
+             
+
+        </style>
+    </head>
+    <body>
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        
+
+
+    </body>
+
+
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="s_name" placeholder="Enter the name" style="background-color: violet;" />
+    <input type="button" value="CalculateMarks" onclick="fun1()"/>
+    <h1 id="Dispaly"></h1>
+    <script>
+        function fun1(){
+         
+           let getValue= document.getElementById("s_name").value;
+                document.getElementById("Dispaly").innerText=getValue;
+
+                return (
+                  `
+                  <div style='color:red;padding:2%;margin:2%;width:40%;background-color:pink;'>
+                        <h1>i am from return statemnet</h1>
+                        <p>
+                                
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi libero commodi voluptates necessitatibus ex cum quo nemo harum, adipisci ducimus repellendus minus, inventore illo corporis, animi molestiae! Libero, ab provident.
+                            </p>
+                      <input type='text' placeholder='enter the name' />
+                  </div>
+                  `
+
+                )
+        }
+
+         document.writeln(fun1())
+
+
+    </script>
+</body>
+</html>
